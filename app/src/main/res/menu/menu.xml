@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_Fire"
+        android:icon="@drawable/ic_smoke_sensor"
+        android:title="Fire Sensor Info"/>
+    <item android:id="@+id/menu_Smoke"
+        android:icon="@drawable/ic_sensor"
+        android:title="GAS Sensor Info"/>
+    <item android:id="@+id/menu_Ultrasonic"
+        android:icon="@drawable/ic_ultrasonic_sensor"
+        android:title="Ultrasonic Info"/>
+
+    <item android:id="@+id/menu_humidity"
+        android:icon="@drawable/humidity"
+        android:title="Humidity Info"/>
+
+    <item android:id="@+id/menu_door"
+        android:icon="@drawable/door_image"
+        android:title="Door Sensor Info"/>
+
+    <item android:id="@+id/menu_temp"
+        android:icon="@drawable/temp"
+        android:title="Temperature Info"/>
+
+    <item android:id="@+id/menu_rain"
+        android:icon="@drawable/temp"
+        android:title="Rain Sensor Info"/>
+
+    <item android:id="@+id/menu_leaser"
+        android:icon="@drawable/temp"
+        android:title="Leaser Sensor Info"/>
+
+    <item android:id="@+id/menu_rfid"
+        android:icon="@drawable/temp"
+        android:title="RFID Info"/>
+
+    <item android:id="@+id/menu_show_all_data"
+        android:icon="@drawable/ic_show"
+        android:title="History"/>
+
+    <item android:id="@+id/menu_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout"/>
+
+</menu>
