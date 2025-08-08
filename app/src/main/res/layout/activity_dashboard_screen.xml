@@ -57,7 +57,7 @@
                     android:id="@+id/tv_result"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="HOMEPILOT  Smart Security using Arduino-based Internet of Things (IoTs) Intrusion Detection System"
+                    android:text="IOT Prison Break Monitoring &amp; Alerting System"
                     android:textAlignment="center"
                     android:textSize="28sp"
                     android:textColor="@color/black"
