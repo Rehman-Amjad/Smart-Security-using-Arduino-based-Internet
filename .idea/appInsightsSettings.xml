@@ -23,9 +23,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.safesocietyalertsystem" />
-                  <option name="mobileSdkAppId" value="1:602493437363:android:85dd10ca297bf1406e77c6" />
-                  <option name="projectId" value="homepilot--smart-security" />
-                  <option name="projectNumber" value="602493437363" />
+                  <option name="mobileSdkAppId" value="1:605016421049:android:5b7f38deed72c43042a168" />
+                  <option name="projectId" value="iot-prison-break-monitoring" />
+                  <option name="projectNumber" value="605016421049" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

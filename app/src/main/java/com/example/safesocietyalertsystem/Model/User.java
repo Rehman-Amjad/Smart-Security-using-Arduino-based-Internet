@@ -5,37 +5,34 @@ public class User {
     String Id;
     String Dated;
     String WindowSensor;
-    String LDR;
     String DoorSensor;
     String HumiditySensor;
     String img;
-    String GasSensor;
     String TempSensor;
     String LaserSensor;
     String RFID;
-    String RainSensor;
     String Timed;
     String UltrsonicSensor;
 
-    public User(String id, String dated, String windowSensor, String LDR, String doorSensor, String humiditySensor, String img, String gasSensor, String tempSensor, String laserSensor, String RFID, String rainSensor, String timed, String ultrsonicSensor) {
+    public User(String id, String dated, String windowSensor, String doorSensor, String humiditySensor, String img, String tempSensor, String laserSensor, String RFID, String timed, String ultrsonicSensor) {
         Id = id;
         Dated = dated;
         WindowSensor = windowSensor;
-        this.LDR = LDR;
         DoorSensor = doorSensor;
         HumiditySensor = humiditySensor;
         this.img = img;
-        GasSensor = gasSensor;
         TempSensor = tempSensor;
         LaserSensor = laserSensor;
         this.RFID = RFID;
-        RainSensor = rainSensor;
         Timed = timed;
         UltrsonicSensor = ultrsonicSensor;
     }
 
+
     public User() {
+
     }
+
 
     public String getId() {
         return Id;
@@ -59,14 +56,6 @@ public class User {
 
     public void setWindowSensor(String windowSensor) {
         WindowSensor = windowSensor;
-    }
-
-    public String getLDR() {
-        return LDR;
-    }
-
-    public void setLDR(String LDR) {
-        this.LDR = LDR;
     }
 
     public String getDoorSensor() {
@@ -93,14 +82,6 @@ public class User {
         this.img = img;
     }
 
-    public String getGasSensor() {
-        return GasSensor;
-    }
-
-    public void setGasSensor(String gasSensor) {
-        GasSensor = gasSensor;
-    }
-
     public String getTempSensor() {
         return TempSensor;
     }
@@ -123,14 +104,6 @@ public class User {
 
     public void setRFID(String RFID) {
         this.RFID = RFID;
-    }
-
-    public String getRainSensor() {
-        return RainSensor;
-    }
-
-    public void setRainSensor(String rainSensor) {
-        RainSensor = rainSensor;
     }
 
     public String getTimed() {

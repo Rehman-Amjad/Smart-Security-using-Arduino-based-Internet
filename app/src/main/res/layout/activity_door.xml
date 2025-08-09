@@ -166,6 +166,41 @@
 
             />
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="20dp"
+            >
+
+            <Button
+                android:id="@+id/btnFanOn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Fan On"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                android:layout_margin="5dp"
+                android:background="@color/Frozi"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/btnFanOff"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Fan Off"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@color/Frozi"
+
+                />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

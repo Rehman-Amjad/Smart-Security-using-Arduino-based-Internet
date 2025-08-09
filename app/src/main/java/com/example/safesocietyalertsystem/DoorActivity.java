@@ -46,7 +46,7 @@ public class DoorActivity extends AppCompatActivity {
     TextView tv_fire,date_text,time_text,tvTimer;
     GifImageView gif;
 
-    Button btn_back,btnOpen;
+    Button btn_back,btnOpen,btnFanOn,btnFanOff;
 
     private CountDownTimer countDownTimer;
     private static final long START_TIME_IN_MILLIS = 30000;
@@ -57,8 +57,10 @@ public class DoorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_door);
 
         img_smoke_back=findViewById(R.id.img_smoke_back);
+        btnFanOff=findViewById(R.id.btnFanOff);
 
         img_fire=findViewById(R.id.img_fire);
+        btnFanOn=findViewById(R.id.btnFanOn);
         tv_fire=findViewById(R.id.tv_fire);
         btn_back=findViewById(R.id.btn_back);
         gif=findViewById(R.id.gif);
@@ -85,6 +87,84 @@ public class DoorActivity extends AppCompatActivity {
             }
         });
 
+
+
+        btnFanOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnFanOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        btnFanOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create a map to hold the updates
+                Map<String, Object> map = new HashMap<>();
+                map.put("FanControl", "1");
+
+                // Update the Firebase database reference
+                FirebaseDatabase.getInstance().getReference().updateChildren(map)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    // Update was successful
+                                    Toast.makeText(getApplicationContext(), "Fan is On", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    // Update failed
+                                    Toast.makeText(getApplicationContext(), "Failed to update door status", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // Handle the error
+                                Toast.makeText(getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }
+        });
+
+        btnFanOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create a map to hold the updates
+                Map<String, Object> map = new HashMap<>();
+                map.put("FanControl", "0");
+
+                // Update the Firebase database reference
+                FirebaseDatabase.getInstance().getReference().updateChildren(map)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    // Update was successful
+                                    Toast.makeText(getApplicationContext(), "Fan is Off", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    // Update failed
+                                    Toast.makeText(getApplicationContext(), "Failed to update door status", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // Handle the error
+                                Toast.makeText(getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+            }
+        });
 
 
 
@@ -187,7 +267,7 @@ public class DoorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Create a map to hold the updates
                 Map<String, Object> map = new HashMap<>();
-                map.put("DoorInfo", "0");
+                map.put("DoorControl", "1");
 
                 // Update the Firebase database reference
                 FirebaseDatabase.getInstance().getReference().updateChildren(map)
@@ -282,7 +362,7 @@ public class DoorActivity extends AppCompatActivity {
         btnOpen.setVisibility(View.VISIBLE);
         // Create a map to hold the updates
         Map<String, Object> map = new HashMap<>();
-        map.put("DoorInfo", "1");
+        map.put("DoorControl", "0");
 
         // Update the Firebase database reference
         FirebaseDatabase.getInstance().getReference().updateChildren(map)

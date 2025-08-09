@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.safesocietyalertsystem.Model.User;
 import com.example.safesocietyalertsystem.Model.UserAdapter;
@@ -55,11 +57,13 @@ public class FirebaseShowData extends AppCompatActivity {
 
 
         MyChildEventListener=new ChildEventListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 User user=snapshot.getValue(User.class);
-            /*Log.d(TAG,"User Name :" + user.getUserName());
-            Log.d(TAG,"User Name :" + user.getUserPassword());*/
+//            /*Log.d(TAG,"User Name :" + user.getUserName());
+                assert user != null;
+                Log.d("TAG CHECK USER NAME","User Name :" + user.getWindowSensor());
                 mDatalist.add(user);
                 mUserAdapter.notifyDataSetChanged();
             }

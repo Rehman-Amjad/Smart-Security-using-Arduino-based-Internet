@@ -70,31 +70,23 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder>{
             holder.tvFire_Sensor.setText("Door Sensor: Door is Close");
         }
 
-        if (user.getGasSensor().equals("1"))
-        {
-            holder.tvsmoke_Sensor.setText("Gas Sensor: Gas is leak");
-        }
-        else
-        {
-            holder.tvsmoke_Sensor.setText("Gas Sensor: No gas leak");
-        }
 
-        if (user.getRainSensor().equals("1"))
+        if (user.getWindowSensor().equals("1"))
         {
-            holder.tvsmoke_Sensor.setText("No Rain at Home");
+            holder.tvsmoke_Sensor.setText("Window is Open");
         }
         else
         {
-            holder.tvsmoke_Sensor.setText("Rain at Home");
+            holder.tvsmoke_Sensor.setText("Window is Close");
         }
 
         if (user.getLaserSensor().equals("1"))
         {
-            holder.tvsmoke_Sensor.setText("Anyone person on Wall");
+            holder.tv_leaser.setText("laser is On");
         }
         else
         {
-            holder.tvsmoke_Sensor.setText("No any person on Wall");
+            holder.tv_leaser.setText("Laser is Off");
         }
 
         holder.tv_temp.setText("Temperature Sensor: "+ user.getTempSensor() + " C");
@@ -172,8 +164,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder>{
             tv_humidity=itemView.findViewById(R.id.tv_humidity);
             tv_rain=itemView.findViewById(R.id.tv_rain);
             tv_leaser=itemView.findViewById(R.id.tv_leaser);
-
-
 
         }
     }
