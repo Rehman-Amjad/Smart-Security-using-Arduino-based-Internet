@@ -100,13 +100,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder>{
         holder.tv_temp.setText("Temperature Sensor: "+ user.getTempSensor() + " C");
         holder.tv_humidity.setText("Humidity Sensor: "+ user.getHumiditySensor() + " %");
 
-        if (user.getFireSensor().equals("1"))
+        if (user.getWindowSensor().equals("1"))
         {
-            holder.tvUltrasonicSensor.setText("Fire Sensor: Fire Alert");
+            holder.tvUltrasonicSensor.setText("Window Sensor: Window Open");
         }
         else
         {
-            holder.tvUltrasonicSensor.setText("Fire Sensor: Everything is Ok");
+            holder.tvUltrasonicSensor.setText("Window Sensor: Window Close");
         }
 
 

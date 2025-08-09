@@ -53,7 +53,6 @@ public class FireSensorScreen extends AppCompatActivity {
 
 
 
-
         img_fire_back=findViewById(R.id.img_fire_back);
         img_fire=findViewById(R.id.img_fire);
         tv_fire=findViewById(R.id.tv_fire);
@@ -91,7 +90,7 @@ public class FireSensorScreen extends AppCompatActivity {
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                fireValue=snapshot.child("FireSensor").getValue(String.class);
+                fireValue=snapshot.child("WindowSensor").getValue(String.class);
                 img=snapshot.child("img").getValue(String.class);
 
                 String date =snapshot.child("Dated").getValue(String.class);
@@ -109,23 +108,24 @@ public class FireSensorScreen extends AppCompatActivity {
                     Bitmap decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
                     img_fire.setImageBitmap(decodedImage);
 
-                    tv_fire.setText("Fire ALert");
-                    gif.setVisibility(View.VISIBLE);
+                    tv_fire.setText("Window is Open");
+//                    gif.setVisibility(View.VISIBLE);
 
-                    play();
+//                    play();
 
                 }
                 else
                 {
-                    tv_fire.setText("Everything is Ok");
-                    gif.setVisibility(View.INVISIBLE);
+                    tv_fire.setText("Window is Close");
+//                    gif.setVisibility(View.INVISIBLE);
                     img_fire.setImageResource(R.drawable.okimage);
                 }
             }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                fireValue=snapshot.child("FireSensor").getValue(String.class);
+                fireValue=snapshot.child("WindowSensor").getValue(String.class);
+                img=snapshot.child("img").getValue(String.class);
 
                 String date =snapshot.child("Dated").getValue(String.class);
                 String time =snapshot.child("Timed").getValue(String.class);
@@ -136,25 +136,23 @@ public class FireSensorScreen extends AppCompatActivity {
 
                 if (fireValue.equals("1"))
                 {
-
-
                     ByteArrayOutputStream baos = new ByteArrayOutputStream();
                     byte[] imageBytes = baos.toByteArray();
                     imageBytes = Base64.decode(img, Base64.DEFAULT);
                     Bitmap decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
                     img_fire.setImageBitmap(decodedImage);
-                    tv_fire.setText("Fire ALert");
-                    gif.setVisibility(View.VISIBLE);
 
-                    play();
+                    tv_fire.setText("Window is Open");
+//                    gif.setVisibility(View.VISIBLE);
+
+//                    play();
 
                 }
                 else
                 {
-                    tv_fire.setText("Everything is Ok");
-                    gif.setVisibility(View.INVISIBLE);
+                    tv_fire.setText("Window is Close");
+//                    gif.setVisibility(View.INVISIBLE);
                     img_fire.setImageResource(R.drawable.okimage);
-                    stopPlayer();
                 }
             }
 

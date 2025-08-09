@@ -31,8 +31,6 @@ public class UltraSensorScreeen extends AppCompatActivity {
 
 
     ImageView img_ultra_back,img_fire;
-
-
     FirebaseDatabase database;
     DatabaseReference myRef;
     String fireValue,img;

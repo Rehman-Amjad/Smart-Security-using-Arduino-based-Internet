@@ -50,7 +50,7 @@ public class SensorAdapter extends RecyclerView.Adapter<SensorAdapter.MySensorVi
         Bitmap decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
 
         holder.imageView.setImageBitmap(decodedImage);
-        holder.tvFire_Sensor.setText("Fire Sensor: "+user.getFireSensor());
+        holder.tvFire_Sensor.setText("Fire Sensor: "+user.getWindowSensor());
 
 
     }

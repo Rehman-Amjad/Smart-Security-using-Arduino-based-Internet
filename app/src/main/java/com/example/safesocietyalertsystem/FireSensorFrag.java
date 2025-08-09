@@ -65,8 +65,8 @@ public class FireSensorFrag extends Fragment {
 
 
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("OnceData");
-        DatabaseReference callref=myRef.child("100");
+        myRef = database.getReference("CurrentData");
+        DatabaseReference callref=myRef.child("1000");
 
 
 
@@ -74,9 +74,9 @@ public class FireSensorFrag extends Fragment {
        callref.addValueEventListener(new ValueEventListener() {
            @Override
            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                fireValue=snapshot.child("FireSensor").getValue(String.class);
-               Toast.makeText(getActivity(), ""+fireValue, Toast.LENGTH_SHORT).show();
-
+                fireValue=snapshot.child("WindowSensor").getValue(String.class);
+//               Toast.makeText(getActivity(), ""+fireValue, Toast.LENGTH_SHORT).show();
+//
               if (fireValue.equals("1"))
               {
                   play();

@@ -4,7 +4,7 @@ public class User {
 
     String Id;
     String Dated;
-    String FireSensor;
+    String WindowSensor;
     String LDR;
     String DoorSensor;
     String HumiditySensor;
@@ -17,10 +17,10 @@ public class User {
     String Timed;
     String UltrsonicSensor;
 
-    public User(String id, String dated, String fireSensor, String LDR, String doorSensor, String humiditySensor, String img, String gasSensor, String tempSensor, String laserSensor, String RFID, String rainSensor, String timed, String ultrsonicSensor) {
+    public User(String id, String dated, String windowSensor, String LDR, String doorSensor, String humiditySensor, String img, String gasSensor, String tempSensor, String laserSensor, String RFID, String rainSensor, String timed, String ultrsonicSensor) {
         Id = id;
         Dated = dated;
-        FireSensor = fireSensor;
+        WindowSensor = windowSensor;
         this.LDR = LDR;
         DoorSensor = doorSensor;
         HumiditySensor = humiditySensor;
@@ -53,12 +53,12 @@ public class User {
         Dated = dated;
     }
 
-    public String getFireSensor() {
-        return FireSensor;
+    public String getWindowSensor() {
+        return WindowSensor;
     }
 
-    public void setFireSensor(String fireSensor) {
-        FireSensor = fireSensor;
+    public void setWindowSensor(String windowSensor) {
+        WindowSensor = windowSensor;
     }
 
     public String getLDR() {

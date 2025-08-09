@@ -76,11 +76,11 @@ public class DashboardScreen extends AppCompatActivity {
                         drayerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                    case R.id.menu_Smoke:
-                        Intent smokeIntent=new Intent(DashboardScreen.this,SmokeSensorScreen.class);
-                        startActivity(smokeIntent);
-                        drayerLayout.closeDrawer(GravityCompat.START);
-                        break;
+//                    case R.id.menu_Smoke:
+//                        Intent smokeIntent=new Intent(DashboardScreen.this,SmokeSensorScreen.class);
+//                        startActivity(smokeIntent);
+//                        drayerLayout.closeDrawer(GravityCompat.START);
+//                        break;
                     case R.id.menu_Ultrasonic:
                         Intent ultraIntent=new Intent(DashboardScreen.this,UltraSensorScreeen.class);
                         startActivity(ultraIntent);
@@ -105,11 +105,11 @@ public class DashboardScreen extends AppCompatActivity {
                         drayerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                        case R.id.menu_rain:
-                        Intent rain=new Intent(DashboardScreen.this, RainActivity.class);
-                        startActivity(rain);
-                        drayerLayout.closeDrawer(GravityCompat.START);
-                        break;
+//                        case R.id.menu_rain:
+//                        Intent rain=new Intent(DashboardScreen.this, RainActivity.class);
+//                        startActivity(rain);
+//                        drayerLayout.closeDrawer(GravityCompat.START);
+//                        break;
 
                         case R.id.menu_leaser:
                         Intent leaser=new Intent(DashboardScreen.this, LeaserActivity.class);
