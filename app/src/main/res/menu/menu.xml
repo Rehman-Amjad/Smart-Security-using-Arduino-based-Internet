@@ -31,7 +31,7 @@
 
     <item android:id="@+id/menu_leaser"
         android:icon="@drawable/temp"
-        android:title="Leaser Sensor Info"/>
+        android:title="Laser Sensor Info"/>
 
     <item android:id="@+id/menu_rfid"
         android:icon="@drawable/temp"

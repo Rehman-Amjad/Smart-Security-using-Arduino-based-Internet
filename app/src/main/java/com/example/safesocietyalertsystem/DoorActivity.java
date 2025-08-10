@@ -49,7 +49,7 @@ public class DoorActivity extends AppCompatActivity {
     Button btn_back,btnOpen,btnFanOn,btnFanOff;
 
     private CountDownTimer countDownTimer;
-    private static final long START_TIME_IN_MILLIS = 30000;
+    private static final long START_TIME_IN_MILLIS = 15000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
